@@ -49,7 +49,7 @@ class Cart:
         Adds items to the cart.
         """
         self.items.update(item)
-        print(f"Added {''.join(item)} to the cart.")
+        print(f"\nAdded {''.join(item)} to the cart.")
     
     def view_cart(self):
         """
@@ -102,10 +102,10 @@ class CheckoutSystem:
             existing_product.individual_price = individual_price
             existing_product.offer_count = offer_count
             existing_product.offer_price = offer_price
-            print(f"Updated Product '{name}' details.")
+            print(f"\nUpdated Product '{name}' details.")
         else:
             self.products[name] = Product(name, individual_price, offer_count, offer_price)
-            print(f"Added new Product '{name}'.")
+            print(f"\nAdded new Product '{name}'.")
 
     def scan_items(self, item_list):
         """
@@ -115,7 +115,7 @@ class CheckoutSystem:
         invalid_items = [item for item in item_list if item not in self.products]
 
         if invalid_items:
-            print(f"Invalid items detected and ignored: {', '.join(invalid_items)}")
+            print(f"\nInvalid items detected and ignored: {', '.join(invalid_items)}")
         
         if valid_items:
             self.cart.add_items(valid_items)
@@ -132,7 +132,7 @@ class CheckoutSystem:
         Lists all products with their details.
         """
         if not self.products:
-            print("No products available.")
+            print("\nNo products available.")
         else:
             print("\nAvailable Products:")
             for product in self.products.values():
@@ -162,7 +162,7 @@ def run_checkout_system():
         elif choice == "2":
             name = input("Enter Product Name: ").strip().upper()
             individual_price = int(input("Enter Individual Price: "))
-            offer_count = input("Enter Offer Count (or press Enter to skip): ").strip()
+            offer_count = input("Enter Quantity for Offer (or press Enter to skip): ").strip()
             offer_price = input("Enter Offer Price (or press Enter to skip): ").strip()
             offer_count = int(offer_count) if offer_count else None
             offer_price = int(offer_price) if offer_price else None
