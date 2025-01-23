@@ -31,8 +31,8 @@ The program offers interactive and default product initialization modes and supp
      ```
      Enter Product Name: E
      Enter Individual Price: 10
-     Enter Offer Count (or press Enter if no offer): 2
-     Enter Offer Price (or press Enter if no offer): 15
+     Enter Quantity for Offer (or press Enter to skip): 2
+     Enter Offer Price (or press Enter to skip): 15
      Added new Product 'E'.
      ```
 
