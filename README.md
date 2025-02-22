@@ -1,4 +1,4 @@
-# Agrichain Cart Checkout System
+# Shopping Cart System
 
 This is a Python-based Cart checkout system that allows users to:
 1. Add or update products with pricing and offers.
